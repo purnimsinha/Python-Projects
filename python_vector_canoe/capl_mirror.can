@@ -1,0 +1,46 @@
+/*@!Encoding:1252*/
+includes
+{
+  
+}
+
+variables
+{
+   message swt_left_on msg_left_on;
+  message swt_right_on msg_right_on; 
+  int i;
+  msTimer T1;
+}
+
+on sysvar swt_left::swt_left
+{
+  if(@swt_left::swt_left==1)
+  {
+    msg_left_on.dlc=0x08;
+    msg_left_on.sgn_left=0x01;
+    output(msg_left_on);
+    setTimer(T1,100);
+  }
+  
+}
+on sysvar swt_right::swt_right
+{
+  if(@swt_right::swt_right==1)
+  {
+    msg_right_on.dlc=0x08;
+    msg_right_on.sgn_right=0x01;
+    output(msg_right_on);
+    setTimer(T1,100);
+    
+  }
+}
+on timer T1
+{
+  for(i=0;i<=7;i++)
+  {
+     msg_left_on.byte(i)=i;
+    msg_right_on.byte(i)=i;
+   
+  }
+}
+
