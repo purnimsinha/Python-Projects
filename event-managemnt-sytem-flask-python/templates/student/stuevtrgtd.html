@@ -1,0 +1,68 @@
+﻿<html>
+
+    <head>
+        <title>Student Area</title>
+        <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    </head>
+    <body>
+
+
+        <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Student Area</a>
+    </div>
+    <ul class="nav navbar-nav">
+        <li><a href="/stuprofile">Profile</a></li>
+      <li><a href="/stuevtrgt">Event Registeration</a></li>
+    
+      <li class="active"><a href="/stuevtrgtd">Registered Events</a></li>
+      <li><a href="/logout">Logout</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+
+
+
+        
+<div class="container">
+  <h2>Registered Events</h2>
+  <p>Here is the details of events that you have registered </p>            
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Father Name</th>
+        <th>Email</th>
+          <th>event</th>
+          <th>action</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for rows in monu %}
+      <tr>
+        <td>{{rows[0]}}</td>
+        <td>{{rows[1]}}</td>
+        <td>{{rows[2]}}</td>
+        <td>{{rows[3]}}</td>
+
+          <td><a href="/studelevt/{{rows[4]}}/{{rows[5]}}" class="btn btn-primary">delete</a></td>
+
+         
+      </tr>
+        </tbody>
+         {% endfor %}
+    
+  </table>
+</div>
+
+
+    </body>
+</html>

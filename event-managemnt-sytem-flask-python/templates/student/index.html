@@ -1,0 +1,62 @@
+<html>
+
+    <head>
+        <title>Student Area</title>
+        <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    </head>
+    <body>
+
+
+        <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Student Area</a>
+    </div>
+    <ul class="nav navbar-nav">
+        <li class="active"><a href="/stuprofile">Profile</a></li>
+      <li><a href="/stuevtrgt">Event Registeration</a></li>
+    
+      <li><a href="/stuevtrgtd">Registered Events</a></li>
+      <li><a href="/logout">Logout</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+
+
+
+        
+<div class="container">
+  <h2>Profile</h2>
+  <p>Hello Student Welcome to the Student Panel </p>            
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Father Name</th>
+        <th>Email</th>
+          <th>Department</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr>
+        <td>{{result[0]}}</td>
+        <td>{{result[1]}}</td>
+        <td>{{result[2]}}</td>
+          <td>{{result[3]}}</td>
+      </tr>
+          
+    </tbody>
+  </table>
+</div>
+
+
+    </body>
+</html>
