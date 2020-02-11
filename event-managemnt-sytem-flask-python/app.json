@@ -1,0 +1,7 @@
+{
+  "name": "Event Management system",
+  "description": "this project is based on python flask frame work which is used to manage the events organised on school and colleges",
+  "repository": "https://github.com/purnimsinha/event-managemnt-sytem-flask-python.git",
+  "logo": "https://engineering.fb.com/wp-content/uploads/2016/05/2000px-Python-logo-notext.svg_.png",
+  "keywords": ["python", "flask"]
+}
